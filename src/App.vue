@@ -1,11 +1,14 @@
 <template>
   <v-app>
     <TopNav />
+    <br />
+    <br />
     <router-view></router-view>
   </v-app>
 </template>
 
 <script>
+import { dbPlaylistsRef } from "./firebase";
 import TopNav from "./components/TopNav";
 
 export default {
@@ -16,6 +19,9 @@ export default {
   data: () => ({
     //
   }),
+  created() {
+    this.$store.dispatch("setPlaylistsRef", dbPlaylistsRef);
+  },
 };
 </script>
 

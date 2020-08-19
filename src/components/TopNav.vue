@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar>
+    <v-app-bar fixed>
       <v-toolbar-title class="ma-12">PlayMo</v-toolbar-title>
       <v-spacer></v-spacer>
 

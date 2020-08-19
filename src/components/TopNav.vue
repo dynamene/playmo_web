@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar>
-      <v-toolbar-title>PlayMo</v-toolbar-title>
+      <v-toolbar-title class="ma-12">PlayMo</v-toolbar-title>
       <v-spacer></v-spacer>
 
       <span class="hidden-sm-and-up">
@@ -10,7 +10,7 @@
         </v-btn>
       </span>
 
-      <v-toolbar-items class="hidden-xs-only">
+      <v-toolbar-items class="hidden-xs-only ma-12">
         <v-btn v-for="item in navItems" :key="item.name" :to="item.link" text>
           <v-icon left small>fa-{{ item.icon }}</v-icon>
           {{ item.title }}

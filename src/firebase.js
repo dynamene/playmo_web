@@ -16,8 +16,8 @@ const config = {
 firebase.initializeApp(config);
 const db = firebase.firestore();
 
-const firebaseAuth = firebase.auth();
-const dbPlaylistsRef = db.collection("playlists");
-const dbProfileRef = db.collection("profiles");
+export const firebaseAuth = firebase.auth();
+firebaseAuth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 
-export default { firebaseAuth, dbPlaylistsRef, dbProfileRef };
+export const dbPlaylistsRef = db.collection("playlists");
+export const dbProfileRef = db.collection("profiles");

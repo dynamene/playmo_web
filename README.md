@@ -1,24 +1,13 @@
-# playmo
+# PlayMo Web
 
-## Project setup
-```
-npm install
-```
+PlayMo web app powered by Firebase.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Getting Started
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Install all dependencies `npm i`
 
-### Lints and fixes files
-```
-npm run lint
-```
+- Create a **.env.local** file and populate it from **.env_example**
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Source environment variables `source .env.local`
+
+- Run locally `npm run serve`

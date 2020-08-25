@@ -7,6 +7,7 @@
         </v-sheet>
       </template>
     </v-img>
+
     <v-card-title>
       <div class="headerClass">{{playlist.name}}</div>
     </v-card-title>
@@ -17,7 +18,7 @@
     </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn class="green--text" text>TrackList</v-btn>
+      <v-btn class="green--text" text :to="`/playlist/${playlist.id}`">TrackList</v-btn>
       <v-spacer></v-spacer>
       <v-btn icon v-if="playlist.description" @click="show = !show">
         <v-icon class="green--text" small>{{ show ? 'fa-chevron-up' : 'fa-chevron-down' }}</v-icon>

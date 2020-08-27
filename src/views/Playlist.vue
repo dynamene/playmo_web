@@ -8,7 +8,8 @@
       </v-col>
 
       <v-col v-else sm="12" offset-lg="3" lg="7">
-        <h2>{{ playlist.name }}</h2>
+        <horizontal-playlist-card :playlist="playlist" />
+        <playlist-table :tracklist="playlist.tracks" />
       </v-col>
     </v-container>
   </div>
@@ -17,8 +18,15 @@
 <script>
 import { dbPlaylistsRef } from "../firebase";
 
+import HorizontalPlaylistCard from "../components/Cards/HorizontalPlaylistCard.vue";
+import PlaylistTable from "../components/Tables/PlaylistTable.vue";
+
 export default {
   name: "Playlist",
+  components: {
+    HorizontalPlaylistCard,
+    PlaylistTable,
+  },
   data() {
     return {
       playlist: {},
@@ -31,7 +39,6 @@ export default {
       .doc(this.$route.params.id)
       .get()
       .then((doc) => {
-        console.log(doc.data());
         if (doc.exists) {
           this.playlist = doc.data();
           return;

@@ -28,6 +28,10 @@ Vue.filter("seconds", (seconds) => {
   return `${hour}:${mins}:${secs}`;
 });
 
+Vue.filter("contributors", (contributors) => {
+  return contributors.join(", ");
+});
+
 new Vue({
   router,
   store,

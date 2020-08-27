@@ -1,12 +1,6 @@
 <template>
   <v-card>
-    <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg">
-      <template v-slot:placeholder>
-        <v-sheet color="grey lighten-4" class="px-3 pt-3 pb-3 fill-height">
-          <v-skeleton-loader class="mx-auto" type="image"></v-skeleton-loader>
-        </v-sheet>
-      </template>
-    </v-img>
+    <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"></v-img>
 
     <v-card-title>
       <div class="headerClass">{{playlist.name}}</div>
